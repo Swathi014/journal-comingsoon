@@ -1,128 +1,84 @@
-
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
-  background: url("https://cdn.pixabay.com/photo/2016/11/22/19/25/adult-1850177_960_720.jpg") top center no-repeat;
-  background-size: cover;
-  position: relative;
+:root {
+  --bs-blue: #1900ff;
+  --bs-indigo: #2d0aad;
+  --bs-purple: #8500f1;
+  --btn-btn-primary: #00e1ff;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(34, 34, 34, 0.8);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (min-width: 1024px) {
-  body {
-    background-attachment: fixed;
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
+
+
+html{
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Nunito', sans-serif;
+  background-color: #1a1a1a !important;
 }
 
-#main {
-  position: relative;
+h1,h3,h2,h5{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
 }
 
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
+
+.message {
+  display: flex;
+  justify-content: center;
+  perspective: 500;
+  padding-top: 25vh;
+}
+.texts {
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15vh;
+  line-height: normal;
+  height: 25vh;
+  width: 60%;
+  text-align: center;
+}
+.text {
+  position: absolute;
+  top: 15%;
+  left: 0;
   width: 100%;
-  padding: 70px 0;
-  /* countdown */
-}
-
-#header h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
-}
-
-#header h2 {
-  color: #eee;
-  margin-bottom: 40px;
-  font-size: 22px;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-section {
-  padding: 60px 0;
+
+@media screen and (max-width:995px){
+  .texts{
+    font-size: 7vh;
+  }
+} 
+
+.goback{
+  display: flex;
+  justify-content: center;
+  perspective: 500;
+  padding-top: 25vh;
 }
-
-.section-bg {
-  background-color: #fff5f5;
-}
-
-.section-title {
-  text-align: center;
-
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
- 
+.textss{
   position: relative;
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# about
---------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 60px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  
-}
-
-.about .content h4 {
-  color: #eee;
-  
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center; 
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-  background: rgba(19, 19, 19, 0.4);
-  padding: 30px 0;
-  color: #fff;
-  font-size: 14px;
-  position: relative;
-}
-
-#footer .copyright {
+  letter-spacing: 1px;
+  height: 25vh;
+  width: 60%;
   text-align: center;
 }
-
